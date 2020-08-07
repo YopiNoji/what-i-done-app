@@ -1,6 +1,5 @@
-import { AppLoading, SplashScreen, Updates } from 'expo';
+import { AppLoading } from 'expo';
 import React from 'react';
-import { Animated, Button, StyleSheet, Text, View } from 'react-native';
 import AnimatedSplashScreen from './AnimatedSplashScreen'
 import { Asset } from 'expo-asset';
 
@@ -20,7 +19,7 @@ export default function AnimatedAppLoader({ children, image }) {
         <AppLoading
             startAsync={startAsync}
             onError={console.error}
-            onFinish={onFinish}
+            onFinish={() => onFinish}
         />
         );
     }

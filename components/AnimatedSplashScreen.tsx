@@ -1,6 +1,6 @@
-import { AppLoading, SplashScreen, Updates } from 'expo';
+import { SplashScreen } from 'expo';
 import React from 'react';
-import { Animated, Button, StyleSheet, Text, View } from 'react-native';
+import { Animated, StyleSheet, View } from 'react-native';
 import Constants from 'expo-constants';
 
 export default function AnimatedSplashScreen({ children, image }) {
@@ -30,7 +30,7 @@ export default function AnimatedSplashScreen({ children, image }) {
       } finally {
         setAppReady(true);
       }
-    });
+    }, []);
   
     return (
       <View style={{ flex: 1 }}>
