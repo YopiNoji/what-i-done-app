@@ -1,14 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import AnimatedAppLoader from './components/AnimatedAppLoader'
 import Constants from 'expo-constants';
 
 export default function App() {
   return (
     <AnimatedAppLoader image={{ uri: Constants.manifest.splash.image }}>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Text>Open up App.tsx to start working on your app!</Text>
-      </View>
+      </SafeAreaView>
     </AnimatedAppLoader>
   );
 }
