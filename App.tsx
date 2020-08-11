@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import AnimatedAppLoader from './components/AnimatedAppLoader'
-import Twitter from './components/Twitter'
+import ListViewOfTasks from './components/ListViewOfTasks'
 import Constants from 'expo-constants';
 
 export default function App() {
   return (
     <AnimatedAppLoader image={{ uri: Constants.manifest.splash.image }}>
       <SafeAreaView style={styles.container}>
-        <Twitter></Twitter>
+        <ListViewOfTasks></ListViewOfTasks>
       </SafeAreaView>
     </AnimatedAppLoader>
   );
