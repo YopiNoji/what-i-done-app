@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import AnimatedAppLoader from './components/AnimatedAppLoader'
 import ListViewOfTasks from './components/ListViewOfTasks'
+import LoginWithAuth0 from './components/LoginWithAuth0'
 import Constants from 'expo-constants';
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
     <AnimatedAppLoader image={{ uri: Constants.manifest.splash.image }}>
       <SafeAreaView style={styles.container}>
         <ListViewOfTasks></ListViewOfTasks>
+        <LoginWithAuth0></LoginWithAuth0>
       </SafeAreaView>
     </AnimatedAppLoader>
   );
