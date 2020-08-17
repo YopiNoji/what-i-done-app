@@ -4,7 +4,7 @@ import * as React from "react";
 import { Alert, Button, Platform, StyleSheet, Text, View } from "react-native";
 
 const auth0ClientId = "";
-const authorizationEndpoint = "https://xxx.auth0.com/authorize";
+const authorizationEndpoint = "https://yopinoji.auth0.com/authorize";
 
 const useProxy = Platform.select({ web: false, default: true });
 const redirectUri = AuthSession.makeRedirectUri({ useProxy });
