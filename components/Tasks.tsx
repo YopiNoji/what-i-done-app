@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, SafeAreaView, ActivityIndicator, Image, StyleSheet } from 'react-native';
-import { ApolloProvider, useQuery, gql } from '@apollo/client';
-
-import { apolloClient } from '../apollo';
+import { useQuery, gql } from '@apollo/client';
 
 const GET_DATA = gql`
   query MyQuery {
@@ -13,11 +11,11 @@ const GET_DATA = gql`
   }
 `
 
-function Tasks() {
+export default function Tasks() {
   const { data, loading, error } = useQuery(GET_DATA);
 
   if (error) { console.error('error', error) };
-  if (loading) {
+  if (loading || !data) {
     return (
       <SafeAreaView style={styles.loadingContainer}>
         <ActivityIndicator />
@@ -48,11 +46,3 @@ const styles = StyleSheet.create({
     paddingHorizontal: 50
   },
 });
-
-export default function ListViewOfTasks() {
-  return (
-    <ApolloProvider client={apolloClient}>
-      <Tasks />
-    </ApolloProvider>
-  );
-}
