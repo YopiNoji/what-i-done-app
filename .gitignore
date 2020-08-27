@@ -66,5 +66,5 @@ web-build/
 .vscode
 
 # Firebase
-firebaseConfig.js
-firebaseConfig.ts
+# firebaseConfig.js
+# firebaseConfig.ts
